@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./swiper-4.1.6.min.css">
     <title>Document</title>
 </head>
 <style>
@@ -22,20 +23,33 @@
     .scroll .list li {
         height: 50px;
     }
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
 </style>
 
 <body>
     <div class="wrap">
         <div class="banner">啊啊啊啊啊所多付过或女军木</div>
+        <button>点击</button>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./1.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
         <div class="scroll">
             <div class="list">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
                 <li></li>
                 <li></li>
                 <li></li>
@@ -55,8 +69,20 @@
 
 
     <script src="./better-scroll.js"></script>
+    <script src="./swiper-4.1.6.min.js"></script>
     <script>
-        var better = new BScroll(".scroll")
+        var btn = document.getElementsByTagName("button")[0];
+        var better = new BScroll(".scroll");
+        var swiper = new Swiper(".swiper-container", {
+            pagination: {
+                el: ".swiper-pagination"
+            }
+
+        });
+        btn.onclick = function() {
+            console.log(swiper.activeIndex);
+        }
+        console.log(swiper);
     </script>
 </body>
 
