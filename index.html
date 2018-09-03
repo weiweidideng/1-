@@ -7,12 +7,57 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<style>
+    .scroll {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .scroll .list {
+        width: 100%;
+        height: auto;
+    }
+    
+    .scroll .list li {
+        height: 50px;
+    }
+</style>
 
 <body>
     <div class="wrap">
         <div class="banner">啊啊啊啊啊所多付过或女军木</div>
-        <div class="scroll"></div>
+        <div class="scroll">
+            <div class="list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </div>
+        </div>
     </div>
+
+
+    <script src="./better-scroll.js"></script>
+    <script>
+        var better = new BScroll(".scroll")
+    </script>
 </body>
 
 </html>
